@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <!-- NuGet metadata -->
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <NoWarn>$(NoWarn);1591</NoWarn>
+        <PackageId>RateLimiter</PackageId>
+        <Version>0.2.4</Version>
+        <AssemblyVersion>0.2.4.0</AssemblyVersion>
+        <FileVersion>0.2.3.0</FileVersion>
+        <InformationalVersion>0.2.4</InformationalVersion>
+        <Authors>Savo Garovic</Authors>
+        <Description>Lightweight rate limiter middleware for ASP.NET Core that limits requests per client IP within a configurable time period.</Description>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\" Link="README.md" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <InternalsVisibleTo Include="RateLimiter.Tests" />
+    </ItemGroup>
+    
+</Project>
